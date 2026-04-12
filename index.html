@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favour Emmanuel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/norwester" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="assets/FE.png" type="image/jpeg">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#" onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+            <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
+            <li><a href="#" onclick="showPage('projects')" id="nav-projects">Projects</a></li>
+            <li><a href="#" onclick="showPage('contact')" id="nav-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section class="page active" id="home">
+        <div class="hero-name">Favour Emmanuel</div>
+        <div class="hero-sub">Backend Developer <span class="dot">•</span> Tailor <span class="dot">•</span> Statistician</div>
+        <div class="hero-actions">
+            <a href="assets/Favour_Emmanuel_CV.pdf" target="_blank" class="btn-primary" download>Download CV / Résumé</a>
+            <div class="hero-links">
+                <a href="https://github.com/Favour-OE/" target="_blank">GitHub</a>
+                <span class="dot">•</span>
+                <a href="https://linkedin.com/in/foemma" target="_blank">LinkedIn</a>
+                <span class="dot">•</span>
+                <a href="mailto:foemma99@outlook.com">Email</a>
+            </div>
+        </div>
+        <div class="ticker-wrap">
+            <div class="ticker-track" id="ticker-track"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="page" id="about">
+        <p class="about-intro">
+            I am a Backend Developer, Statistician, and Tailor driven by building systems and solutions that
+            are practical, scalable, and impactful. I work with Python, Django, Flask, FastAPI, SQL, JavaScript,
+            TypeScript, R, SPSS, and Power BI to develop backend systems and analyze data. I am currently
+            building a <strong>school result management system</strong> and an <strong>e-commerce tailoring backend</strong> while
+            improving my collaboration skills in team environments. I have built tools like a <strong>CSV batch
+            extractor</strong> that processes millions of rows efficiently and an <strong>automated file sorter.</strong> Beyond
+            tech, my tailoring work has strengthened my precision and attention to detail in solving real-world problems.
+        </p>
+        <h2 class="section-title">About Me</h2>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="page" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img class="project-card-img" src="assets/text_analysis.png" alt="Text Analysis API" loading="lazy">
+                <div class="project-card-body">
+                    <div class="project-stack">Python · Flask · NLTK · BeautifulSoup · Pandas</div>
+                    <div class="project-title">Text Analysis & Stock Intelligence API</div>
+                    <div class="project-subtitle">NLP-Based Text Mining and Sentiment Analysis System</div>
+                    <p class="project-desc">A modular NLP system that extracts sentiment scores and key insights from financial news articles, integrated with stock data and exposed as a REST API for flexible analytics integration.</p>
+                    <div class="project-highlights">
+                        <span class="highlight-tag">Sentiment Analysis</span>
+                        <span class="highlight-tag">News Scraping</span>
+                        <span class="highlight-tag">Word Cloud</span>
+                        <span class="highlight-tag">REST API</span>
+                    </div>
+                    <button class="read-more-btn" onclick="showDetail(0)">Read More →</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-card-img" src="assets/csv_batch xctractor.png" alt="CSV Batch Extractor" loading="lazy">
+                <div class="project-card-body">
+                    <div class="project-stack">Python · Pandas · CLI · Regex</div>
+                    <div class="project-title">CSV Batch Extractor</div>
+                    <div class="project-subtitle">High-Performance Large CSV Filtering Tool</div>
+                    <p class="project-desc">A Python tool that processes 3M+ row CSV files without overwhelming memory, using streaming techniques and regex filtering to export results into manageable batch files.</p>
+                    <div class="project-highlights">
+                        <span class="highlight-tag">3M+ Row Datasets</span>
+                        <span class="highlight-tag">Memory-Efficient</span>
+                        <span class="highlight-tag">Regex Filtering</span>
+                        <span class="highlight-tag">Batch Export</span>
+                    </div>
+                    <button class="read-more-btn" onclick="showDetail(1)">Read More →</button>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img class="project-card-img" src="assets/smart_file_organizer.png" alt="Smart File Organizer" loading="lazy">
+                <div class="project-card-body">
+                    <div class="project-stack">Python · Tkinter · CLI · File System Automation</div>
+                    <div class="project-title">Smart File Organizer</div>
+                    <div class="project-subtitle">Automated File Sorting & Real-Time Folder Monitoring</div>
+                    <p class="project-desc">A Python automation tool with GUI and CLI interfaces that sorts files into structured folders by type, with real-time watch mode for over 40 file formats.</p>
+                    <div class="project-highlights">
+                        <span class="highlight-tag">GUI + CLI</span>
+                        <span class="highlight-tag">Real-Time Watch</span>
+                        <span class="highlight-tag">40+ Formats</span>
+                        <span class="highlight-tag">Open Source</span>
+                    </div>
+                    <button class="read-more-btn" onclick="showDetail(2)">Read More →</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECT DETAIL -->
+    <section id="project-detail">
+        <button class="back-btn" onclick="backToProjects()">← Back to Projects</button>
+        <img class="detail-hero-img" id="detail-img" src="" alt="">
+        <div class="detail-title" id="detail-title"></div>
+        <div class="detail-subtitle" id="detail-subtitle"></div>
+        <div class="detail-stack-row" id="detail-stack"></div>
+        <div class="detail-body" id="detail-body"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="page" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <span class="contact-label">WhatsApp / Phone</span>
+                        <span class="contact-value"><a href="https://wa.me/2348088850824" target="_blank">+234 808 885 0824</a></span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value"><a href="mailto:foemma99@outlook.com">foemma99@outlook.com</a></span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="contact-item-text">
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Minna, Niger State, Nigeria</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-social">
+                <h3>Find Me Online</h3>
+                <div class="social-links">
+                    <a href="https://github.com/Favour-OE/" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </div>
+                        <span>github.com/Favour-OE</span>
+                        <span class="social-handle">GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/foemma" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </div>
+                        <span>@foemma</span>
+                        <span class="social-handle">LinkedIn</span>
+                    </a>
+                    <a href="https://instagram.com/favour_oe" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </div>
+                        <span>@favour_oe</span>
+                        <span class="social-handle">Instagram</span>
+                    </a>
+                    <a href="https://facebook.com/" target="_blank" class="social-link">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </div>
+                        <span>@favour_oe</span>
+                        <span class="social-handle">Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--  -->
+
+    <script src="js/script.js"></script>
+</body>
+</html>
