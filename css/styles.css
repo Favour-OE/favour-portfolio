@@ -269,7 +269,8 @@ nav ul li a.active {
 
 /* ─── ABOUT ─── */
 #about {
-	padding: 100px 60px 80px;
+	padding: 160px 60px 80px;
+    max-height: 100vh;
 }
 
 .about-intro {
@@ -434,52 +435,58 @@ nav ul li a.active {
 /* ─── PROJECT DETAIL ─── */
 #project-detail {
 	display: none;
-	padding: 100px 60px 80px;
+	padding: 100px 60px 80px 200px;
 }
 
 .back-btn {
 	display: inline-flex;
 	align-items: center;
 	gap: 8px;
-	font-family: "Norwester", sans-serif;
-	font-size: 0.85rem;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+	font-family: 'Barlow', sans-serif;
+	font-size: 0.9rem;
+	font-weight: 500;
+	letter-spacing: 0;
+	text-transform: none;
 	color: var(--green);
 	cursor: pointer;
-	background: none;
-	border: none;
-	margin-bottom: 38px;
-	transition: gap 0.2s;
+	background: var(--green-bg);
+	border: 1.5px solid rgba(45, 122, 45, 0.2);
+	padding: 10px 18px;
+	border-radius: 25px;
+	margin-bottom: 32px;
+	transition: all 0.2s;
 }
 .back-btn:hover {
+	background: var(--green);
+	color: var(--white);
 	gap: 12px;
 }
 
 .detail-hero-img {
 	width: 100%;
 	max-width: 900px;
-	height: 360px;
+	height: 400px;
 	object-fit: cover;
-	border-radius: 10px;
-	margin-bottom: 34px;
+	border-radius: 12px;
+	margin-bottom: 28px;
 	background: var(--green-bg);
 	display: block;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
 .detail-title {
 	font-family: "Anton", sans-serif;
-	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-size: clamp(2rem, 5vw, 3rem);
 	color: var(--green);
 	margin-bottom: 8px;
-	line-height: 1;
+	line-height: 1.1;
 	letter-spacing: 0.02em;
 }
 
 .detail-subtitle {
-	font-size: 1rem;
+	font-size: 1.05rem;
 	color: var(--text-light);
-	margin-bottom: 22px;
+	margin-bottom: 20px;
 	font-weight: 500;
 }
 
@@ -487,19 +494,20 @@ nav ul li a.active {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
-	margin-bottom: 28px;
+	margin-bottom: 32px;
 }
 
 .skill-tag {
-	background: var(--white);
-	border: 1.5px solid var(--border);
-	color: var(--text-mid);
-	font-family: "Norwester", sans-serif;
-	font-size: 0.78rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	padding: 5px 12px;
-	border-radius: 4px;
+	background: var(--green-bg);
+	border: 1.5px solid rgba(45, 122, 45, 0.2);
+	color: var(--green-dark);
+	font-family: 'Barlow', sans-serif;
+	font-size: 0.8rem;
+	font-weight: 500;
+	letter-spacing: 0.03em;
+	text-transform: none;
+	padding: 6px 14px;
+	border-radius: 20px;
 }
 
 .detail-body {
@@ -508,19 +516,42 @@ nav ul li a.active {
 	line-height: 1.8;
 	color: var(--text-mid);
 }
+.detail-body > p:first-of-type {
+	font-size: 1.08rem;
+	line-height: 1.75;
+	color: var(--text);
+	margin-bottom: 24px;
+}
 .detail-body h3 {
-	font-family: "Norwester", sans-serif;
-	font-size: 1rem;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
+	font-family: 'Barlow', sans-serif;
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-transform: none;
+	letter-spacing: 0;
 	color: var(--green);
-	margin: 28px 0 12px;
+	margin: 40px 0 16px;
+	padding-left: 16px;
+	border-left: 3px solid var(--green);
+}
+.detail-body p {
+	margin-bottom: 16px;
 }
 .detail-body ul {
-	padding-left: 20px;
+	padding-left: 0;
+	list-style: none;
+	margin-bottom: 20px;
 }
 .detail-body ul li {
-	margin-bottom: 8px;
+	margin-bottom: 12px;
+	padding-left: 24px;
+	position: relative;
+}
+.detail-body ul li::before {
+	content: "→";
+	position: absolute;
+	left: 0;
+	color: var(--green);
+	font-weight: 600;
 }
 
 /* ─── CONTACT ─── */

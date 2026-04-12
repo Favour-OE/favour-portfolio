@@ -32,11 +32,15 @@ Python, Django, Flask, FastAPI, PostgreSQL, React, TypeScript, and more.
 favour-portfolio/
 ├── index.html
 ├── css/
-│   └── styles.css
+│   ├── styles.css
+│   └── fonts/
+│       ├── anton.ttf
+│       ├── barlow-*.ttf
+│       └── norwester.woff
 ├── js/
 │   └── script.js
 └── assets/
     ├── Favour_Emmanuel_CV.pdf
-    ├── icon.jpg
+    ├── FE.png
     └── *.png
 ```
